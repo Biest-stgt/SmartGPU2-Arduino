@@ -380,7 +380,7 @@ SMARTGPUREPLY SMARTGPU2::printSpecialNumber(AXIS x1, AXIS y1, AXIS x2, AXIS y2, 
   return (SMARTGPUREPLY)getcharRX();
 }
 
-SMARTGPUREPLY SMARTGPU2::string(AXIS x1, AXIS y1, AXIS x2, AXIS y2, char text[], NUMBEROFBYTES *SPB){    //Draw a string on the screen on defined Text Box coords, and stores the successfully printed bytes on SPB
+SMARTGPUREPLY SMARTGPU2::string(AXIS x1, AXIS y1, AXIS x2, AXIS y2, char text[]){    //Draw a string on the screen on defined Text Box coords, and stores the successfully printed bytes on SPB
   unsigned int counter=0, sp=0; 
   
   putcharTX('S');             //String Function 
@@ -404,7 +404,7 @@ SMARTGPUREPLY SMARTGPU2::string(AXIS x1, AXIS y1, AXIS x2, AXIS y2, char text[],
   ((unsigned char*)&sp)[1]=getcharRX();
   ((unsigned char*)&sp)[0]=getcharRX();
 
-  *SPB = sp;
+  //*SPB = sp; // as this pointer makes a problem with 32bit CPUs
   return (SMARTGPUREPLY)getcharRX();
 }
 
@@ -436,7 +436,7 @@ SMARTGPUREPLY SMARTGPU2::stringSD(AXIS x1, AXIS y1, AXIS x2, AXIS y2, NUMBEROFBY
   ((unsigned char*)&sp)[1]=getcharRX();
   ((unsigned char*)&sp)[0]=getcharRX();
 
-  *SPB = sp; 
+  //*SPB = sp; // as this pointer makes a problem with 32bit CPUs
   return (SMARTGPUREPLY)getcharRX();
 }
 
