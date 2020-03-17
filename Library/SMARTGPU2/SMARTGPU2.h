@@ -14,7 +14,7 @@ OR OTHER SIMILAR COSTS.
 *********************************************************/
 
 /********************************************************
- ARDUINO SMARTGPU2 LIBRARY VERSION V7.0
+ ARDUINO SMARTGPU2 LIBRARY VERSION V6.0 CL
  - Library supports any SmartGPU2 LCDXXXxXXX connected via SmartSHIELD board(for smartGPU2 4.3" and 7.0" smartSHIELD is always required)
  - Library supports the SmartGPU2 LCD320x240 2.4" mounted directly as shield by uncommenting the appropriate line below
  - Library supports the ARDUINO DUE board via SmartSHIELD by adding external jumpers to serial2 or serial3 port
@@ -56,11 +56,11 @@ OR OTHER SIMILAR COSTS.
 /**************DON'T MODIFY UP FROM HERE****************/
 //SmartGPU2-Arduino security RESET PIN re-definition and AREF pin re-configuration if using SmartGPU2 LCD320x240 2.4" directly as shield
 #ifdef SMARTGPU2ASSHIELD            //define valid only for the SmartGPU2 LCD320x240 2.4" mounted directly as Arduino Shield
-  #ifdef ARDUINO_DUE                  //If arduino DUE is defined
-  #error "smartGPU2 LCD320x240 2.4 board can't be used directly mounted as shield on Arduino DUE, connect via SmartSHIELD or jumpers"
-  #endif
- #define RESET              13       //re-define RESET pin as 13 as this is the pin that is connected to Reset 
- #define ARDUINOREFERENCE   EXTERNAL //re-define AREF pin reference as EXTERNAL in order to not interfere with 3.3V of smartGPU2
+#ifdef ARDUINO_DUE                  //If arduino DUE is defined
+#error "smartGPU2 LCD320x240 2.4 board can't be used directly mounted as shield on Arduino DUE, connect via SmartSHIELD or jumpers"
+#endif
+#define RESET              13       //re-define RESET pin as 13 as this is the pin that is connected to Reset 
+#define ARDUINOREFERENCE   EXTERNAL //re-define AREF pin reference as EXTERNAL in order to not interfere with 3.3V of smartGPU2
 #endif
 
 //General definitions
