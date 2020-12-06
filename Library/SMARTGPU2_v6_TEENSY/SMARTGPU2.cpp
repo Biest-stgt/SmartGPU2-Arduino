@@ -54,7 +54,7 @@ void resetSmartGPU(){            //Reset the SMARTGPU2 board
 
 //Arduino Exclusive function - Configures the Hardware
 void SMARTGPU2::init(){          //configure the arduino board for SMARTGPU2 board support
-	analogReference(ARDUINOREFERENCE); //Set AREF pin Analog Reference (avoids damage to arduino boards if SG2 is mounted as arduino shield)
+//	analogReference(ARDUINOREFERENCE); //Set AREF pin Analog Reference (avoids damage to arduino boards if SG2 is mounted as arduino shield)
 	setBaud(9600);                     //Default Arduino-SmartGPU2 communication Baudrate is 9600
 	pinMode(RESET, OUTPUT);            //Configure pin as output
 	digitalWrite(RESET, HIGH);         //Set the pin to 5v to exit reset	

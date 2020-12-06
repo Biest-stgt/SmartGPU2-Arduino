@@ -14,7 +14,7 @@ OR OTHER SIMILAR COSTS.
 *********************************************************/
 
 /********************************************************
- ARDUINO SMARTGPU2 LIBRARY VERSION V6.0 CL
+ ARDUINO SMARTGPU2 LIBRARY VERSION V6.0
  - Library supports any SmartGPU2 LCDXXXxXXX connected via SmartSHIELD board(for smartGPU2 4.3" and 7.0" smartSHIELD is always required)
  - Library supports the SmartGPU2 LCD320x240 2.4" mounted directly as shield by uncommenting the appropriate line below
  - Library supports the ARDUINO DUE board via SmartSHIELD by adding external jumpers to serial2 or serial3 port
@@ -32,7 +32,6 @@ OR OTHER SIMILAR COSTS.
 
 //If using Arduino DUE please uncomment the next line - Remember to re-wire smartGPU2 TX and RX pins to the defined Serial port of Arduino
 //#define ARDUINO_DUE
-#define TEENSY
 
 //-SmartGPU2-Arduino RESET PIN definition 
 //-SmartSHIELD uses default Arduino pin p4 for Reset, if another pin is soldered in the SmartSHIELD(pin 7, 8 or 13), please modify here:
@@ -40,14 +39,11 @@ OR OTHER SIMILAR COSTS.
 
 //-Arduino serial port and AREF configuration using smartSHIELD
 #ifdef ARDUINO_DUE                  //If arduino DUE is defined
- #define SERIALPORT        (Serial1) //(Serial2,Serial3), connect the smartGPU2 TX and RX pins to the defined serial port of Arduino
- #define ARDUINOREFERENCE   AR_DEFAULT
-#elif defined(TEENSY)
- #define SERIALPORT        (Serial1)
- #define ARDUINOREFERENCE  DEFAULT   //Define the AREF pin - Internal Analog reference as DEFAULT
+#define SERIALPORT        (Serial1) //(Serial2,Serial3), connect the smartGPU2 TX and RX pins to the defined serial port of Arduino
+#define ARDUINOREFERENCE   AR_DEFAULT
 #else                               //Arduino UNO. MEGA or similar
- #define SERIALPORT        (Serial)
- #define ARDUINOREFERENCE  DEFAULT   //Define the AREF pin - Internal Analog reference as DEFAULT
+#define SERIALPORT        (Serial1)
+//#define ARDUINOREFERENCE  DEFAULT   //Define the AREF pin - Internal Analog reference as DEFAULT
 #endif
 /****************END OF USER MODIFABLE******************/
 

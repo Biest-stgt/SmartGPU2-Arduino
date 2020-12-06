@@ -1,6 +1,6 @@
 
 /**************************************************************/
-  SMARTGPU2 ARDUINO-Teensy LIBRARY V7.0 VIZIC TECHNOLOGIES 2020
+  SMARTGPU2 ARDUINO UNO-MEGA-DUE LIBRARY V6.0 VIZIC TECHNOLOGIES 2019
 
 This library help the user to communicate any SMARTGPU2 board with an arduino via the SmartSHIELD board.
 
