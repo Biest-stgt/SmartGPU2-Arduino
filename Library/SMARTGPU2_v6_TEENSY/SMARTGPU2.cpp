@@ -14,7 +14,7 @@ OR OTHER SIMILAR COSTS.
 *********************************************************/
 
 /********************************************************
- ARDUINO SMARTGPU2 LIBRARY VERSION V6.0
+ ARDUINO SMARTGPU2 LIBRARY VERSION V6.1 CL/TR
  - Library supports any SmartGPU2 LCDXXXxXXX connected via SmartSHIELD board(for smartGPU2 4.3" and 7.0" smartSHIELD is always required)
  - Library supports the SmartGPU2 LCD320x240 2.4" mounted directly as shield by uncommenting the appropriate line below
  - Library supports the ARDUINO DUE board via SmartSHIELD by adding external jumpers to serial2 or serial3 port
